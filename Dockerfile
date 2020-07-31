@@ -21,7 +21,7 @@ RUN chmod +x ./docker-entrypoint.sh
 RUN git clone --depth 1 -b ${branch} https://github.com/David-Greco/MyMagicMirror.git /opt/MyMagicMirror
 RUN cp -r /opt/MyMagicMirror/clock /opt/magic_mirror/default_modules
 RUN cp -r /opt/MyMagicMirror/compliments /opt/magic_mirror/default_modules
-RUN cp MyMagicMirror/config.js /opt/magic_mirror/default_config
+RUN cp /opt/MyMagicMirror/config.js /opt/magic_mirror/default_config
 
 EXPOSE 8080
 ENTRYPOINT ["./docker-entrypoint.sh"]
