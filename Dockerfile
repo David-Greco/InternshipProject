@@ -19,7 +19,7 @@ COPY mm-docker-config.js docker-entrypoint.sh ./
 RUN chmod +x ./docker-entrypoint.sh
 
 RUN git clone --depth 1 -b ${branch} https://github.com/David-Greco/MyMagicMirror.git /opt/MyMagicMirror
-RUN cp -r /optMyMagicMirror/clock /opt/magic_mirror/default_modules
+RUN cp -r /opt/MyMagicMirror/clock /opt/magic_mirror/default_modules
 RUN cp -r /opt/MyMagicMirror/compliments /opt/magic_mirror/default_modules
 RUN cp MyMagicMirror/config.js /opt/magic_mirror/default_config
 
