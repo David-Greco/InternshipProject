@@ -18,7 +18,7 @@ RUN npm install --unsafe-perm --silent
 COPY mm-docker-config.js docker-entrypoint.sh ./
 RUN chmod +x ./docker-entrypoint.sh
 
-RUN git clone --depth 1 -b ${branch} https://github.com/David-Greco/MyMagicMirror.git .
+RUN git clone --depth 1 -b ${branch} https://github.com/David-Greco/MyMagicMirror.git
 RUN cp MyMagicMirror/clock MagicMirror/modules/default
 RUN cp MyMagicMirror/compliments MagicMirror/modules/default
 RUN cp MyMagicMirror/config.js MagicMirror/config/config.js
