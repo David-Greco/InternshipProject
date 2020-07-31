@@ -18,10 +18,10 @@ RUN npm install --unsafe-perm --silent
 COPY mm-docker-config.js docker-entrypoint.sh ./
 RUN chmod +x ./docker-entrypoint.sh
 
-RUN git clone --depth 1 -b ${branch} https://github.com/David-Greco/MyMagicMirror.git
-RUN cp -r MyMagicMirror/clock /opt/default_modules
-RUN cp -r MyMagicMirror/compliments /opt/default_modules
-RUN cp MyMagicMirror/config.js /opt/default_config
+RUN git clone --depth 1 -b ${branch} https://github.com/David-Greco/MyMagicMirror.git /opt/MyMagicMirror
+RUN cp -r /optMyMagicMirror/clock /opt/magic_mirror/default_modules
+RUN cp -r /opt/MyMagicMirror/compliments /opt/magic_mirror/default_modules
+RUN cp MyMagicMirror/config.js /opt/magic_mirror/default_config
 
 EXPOSE 8080
 ENTRYPOINT ["./docker-entrypoint.sh"]
