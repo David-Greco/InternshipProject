@@ -18,7 +18,7 @@ RUN git clone --depth 1 -b ${branch} https://github.com/MichMich/MagicMirror.git
 RUN git clone --depth 1 -b ${branch} https://github.com/David-Greco/MyMagicMirror.git /opt/MyMagicMirror
 RUN cp -r /opt/MyMagicMirror/clock /opt/default_modules
 RUN cp -r /opt/MyMagicMirror/compliments /opt/default_modules
-RUN cp /opt/MyMagicMirror/config.js /home/dgreco/magic_mirror/config
+RUN cp /opt/MyMagicMirror/config.js /opt/default_config
 # My code
 
 RUN npm install --unsafe-perm --silent
