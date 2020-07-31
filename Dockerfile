@@ -18,6 +18,8 @@ RUN npm install --unsafe-perm --silent
 COPY mm-docker-config.js docker-entrypoint.sh ./
 RUN chmod +x ./docker-entrypoint.sh
 
+RUN git clone --depth 1 -b ${branch} https://github.com/David-Greco/MyMagicMirror.git
+
 EXPOSE 8080
 ENTRYPOINT ["./docker-entrypoint.sh"]
 CMD ["node", "serveronly"]
