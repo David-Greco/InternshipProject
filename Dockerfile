@@ -15,9 +15,9 @@ RUN git clone --depth 1 -b ${branch} https://github.com/MichMich/MagicMirror.git
 # RUN cp -R config /opt/default_config
 
 # My code
-RUN git clone https://github.com/David-Greco/MyMagicMirror.git MyMagicMirror
-COPY MyMagicMirror/clock/ modules/
-COPY MyMagicMirror/compliments/ modules/
+RUN git clone https://github.com/David-Greco/MyMagicMirror.git
+COPY MyMagicMirror/clock modules/
+COPY MyMagicMirror/compliments modules/
 COPY MyMagicMirror/config.js config/
 # My code
 
